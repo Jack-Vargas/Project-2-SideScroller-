@@ -26,11 +26,7 @@ public class EStats : MonoBehaviour
 
     public void Drop()
     {
-        int dropNum = Random.Range (0, 2
-            
-            
-            
-            );
+        int dropNum = Random.Range (0, 2);
         if (dropNum == 1)
         {
             Instantiate(gear, gameObject.transform.position, gameObject.transform.rotation);
