@@ -27,7 +27,8 @@ public class Sword : MonoBehaviour
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(swordPos.position, swordRange, Enemy);
                 for (int i = 0; i < enemiesToDamage.Length;  i++)
                 {
-                    enemiesToDamage[i].GetComponent<EStats>().health -= damage;
+                    EStats ennemy = enemiesToDamage[i].GetComponent<EStats>();
+                    ennemy.TakeDamage(damage);
                 }
                 swordClDwn = startSwordCldwn;
                 StartCoroutine("SwordAnim");
